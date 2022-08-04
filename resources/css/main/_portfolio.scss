@@ -56,6 +56,7 @@
                 border-radius: 1rem;
             }
         }
+
         .tab-content {
             width: 100%;
             height: 229px;
@@ -112,37 +113,46 @@
         }
     }
 }
+
 .filter_1 {
     filter: invert(1);
 }
+
 body.light {
     .portfolio-main {
         .react-tabs .tab-content div,
         .react-tabs .tab-content h3 {
             background: var(--main-primary-color);
         }
+
         &.portfolio-main .react-tabs__tab {
             color: #3b3a3a;
         }
+
         .portfolio-tab-list li:hover,
         .portfolio-tab-list li.react-tabs__tab--selected {
             color: var(--main-primary-color);
         }
     }
+
     .modal_portfolio .modal__content {
         background: #fff;
     }
+
     .modal_portfolio .modal__outside {
         background: rgba(0, 0, 0, 0.65);
     }
+
     .modal_portfolio .close-modal img {
         height: 100%;
         width: 100%;
         filter: invert(1);
+
         &:hover {
             filter: invert(0.9);
         }
     }
+
     .modal_portfolio .modal__img {
         background: #fff;
     }
