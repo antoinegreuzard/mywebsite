@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import lightImage from "../../../img/sun.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMoon } from '@fortawesome/free-regular-svg-icons'
 
 const SwitchDark = () => {
   const [isDark, setIsDark] = useState(false);
@@ -30,7 +32,7 @@ const SwitchDark = () => {
           <img src={lightImage} alt="swicher" className="filter_1" width="24" height="24" />
         </span>
         <span className="dark-text">
-          <i className="fa fa-moon-o" aria-hidden="true"></i>
+          <i aria-hidden="true"><FontAwesomeIcon icon={faMoon} /></i>
         </span>
       </div>
     </label>

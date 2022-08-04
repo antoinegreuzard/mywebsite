@@ -2,6 +2,8 @@ import React, {useRef} from "react";
 import emailjs from "@emailjs/browser";
 import {toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
 const Contact = () => {
     const form = useRef();
@@ -91,7 +93,7 @@ const Contact = () => {
                     <div className="col-12">
                         <button type="submit" className="button">
                             <span className="button-text">ENVOYER</span>
-                            <span className="button-icon fa fa-send"></span>
+                            <span className="button-icon"><FontAwesomeIcon icon={faPaperPlane} /></span>
                         </button>
                     </div>
                     {/* End .col */}

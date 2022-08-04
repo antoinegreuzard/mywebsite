@@ -5,6 +5,10 @@ import Experience from "./Experience";
 import PersonalInfo from "./PersonalInfo";
 import cv from "../../../img/antoine-greuzard-CV.pdf";
 import heroImgMobile from "../../../img/hero/antoine-greuzard-mobile.jpg";
+import heroWebpMobile from "../../../img/hero/antoine-greuzard-mobile.webp";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
+
 
 const index = () => {
     return (
@@ -23,11 +27,15 @@ const index = () => {
                             {/* End .col */}
 
                             <div className="col-12 d-block d-sm-none">
-                                <img
-                                    src={heroImgMobile}
-                                    className="img-fluid main-img-mobile"
-                                    alt="Antoine Greuzard" rel="preload" as="image"
-                                />
+                                <picture>
+                                    <source srcSet={heroWebpMobile} type="image/webp"/>
+                                    <img
+                                        src={heroImgMobile}
+                                        className="img-fluid main-img-mobile"
+                                        alt="Antoine Greuzard" rel="preload" as="image"
+                                    />
+                                </picture>
+
                             </div>
                             {/* image for mobile menu */}
 
@@ -39,7 +47,7 @@ const index = () => {
                             <div className="col-12 mt-4">
                                 <a className="button" href={cv} download>
                                     <span className="button-text">mon cv</span>
-                                    <span className="button-icon fa fa-download"></span>
+                                    <span className="button-icon"><FontAwesomeIcon icon={faDownload} /></span>
                                 </a>
                             </div>
                             {/* End download button */}

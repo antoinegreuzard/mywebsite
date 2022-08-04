@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
 
 const educationContent = [
     {
@@ -15,7 +17,7 @@ const Education = () => {
             {educationContent.map((val, i) => (
                 <li key={i}>
                     <div className="icon">
-                        <i className="fa fa-briefcase"></i>
+                        <i><FontAwesomeIcon icon={faBriefcase} /></i>
                     </div>
                     <span className="time open-sans-font text-uppercase">{val.year}</span>
                     <h3 className="poppins-font text-uppercase">

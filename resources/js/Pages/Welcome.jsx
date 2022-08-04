@@ -9,11 +9,13 @@ import Contact from "../Components/Contact";
 import Social from "../Components/Social";
 import SwitchDark from "../Components/switch/SwitchDark";
 import CustomCursor from '@/Components/CustomCursor';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome, faUser, faBriefcase, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
-const menuItem = [{icon: "fa-home", menuName: "Accueil"}, {icon: "fa-user", menuName: "CV"}, {
-    icon: "fa-briefcase",
+const menuItem = [{icon: faHome, menuName: "Accueil"}, {icon: faUser, menuName: "CV"}, {
+    icon: faBriefcase,
     menuName: "Portfolio"
-}, {icon: "fa-envelope-open", menuName: "Contact"}];
+}, {icon: faEnvelope, menuName: "Contact"}];
 
 export default function Welcome(props) {
     return (<>
@@ -25,7 +27,7 @@ export default function Welcome(props) {
                     <div className="header">
                         <TabList className=" icon-menu  revealator-slideup revealator-once revealator-delay1">
                             {menuItem.map((item, i) => (<Tab className="icon-box" key={i}>
-                                    <i className={`fa ${item.icon}`}></i>
+                                    <i><FontAwesomeIcon icon={item.icon}/></i>
                                 </Tab>))}
                         </TabList>
                     </div>

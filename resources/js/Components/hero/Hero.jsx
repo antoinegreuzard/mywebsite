@@ -1,14 +1,15 @@
 import React from "react";
-// import heroImg from "../../../img/hero/antoine-greuzard.jpg";
 import heroImg from '../../../img/hero/antoine-greuzard.jpg';
 import heroImgMobile from "../../../img/hero/antoine-greuzard-mobile.jpg";
-import heroImgwebp from '../../../img/hero/antoine-greuzard.webp';
-import heroImgMobilewebp from "../../../img/hero/antoine-greuzard-mobile.webp";
+import heroWebpMobile from "../../../img/hero/antoine-greuzard-mobile.webp";
 import cv from "../../../img/antoine-greuzard-CV.pdf";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 const heroContent = {
     heroImage: heroImg,
     heroMobileImage: heroImgMobile,
+    heroWebpMobile: heroWebpMobile,
     heroTitleName: "Antoine Greuzard",
     heroDesignation: "Développeur web",
     heroDescriptions: `Je me présente, je suis Antoine Greuzard, développeur web, principalement sur WordPress. Je me suis lancé très récemment dans le monde de l'entreprenariat, j'ai décidé alors de travailler en partenariat avec des agences web pour les épauler.`,
@@ -30,7 +31,7 @@ const Hero = () => {
                 <div className="col-12 col-lg-8 offset-lg-4 home-details  text-center text-lg-start">
                     <div>
                         <picture>
-                            <source srcSet={heroContent.heroImgMobilewebp} type="image/webp"/>
+                            <source srcSet={heroContent.heroWebpMobile} type="image/webp"/>
                             <img
                                 src={heroContent.heroMobileImage}
                                 className="img-fluid main-img-mobile d-sm-block d-lg-none"
@@ -44,7 +45,7 @@ const Hero = () => {
                         <p className="open-sans-font">{heroContent.heroDescriptions}</p>
                         <a className="button" href={cv} download>
                             <span className="button-text">{heroContent.heroBtn}</span>
-                            <span className="button-icon fa fa-download"></span>
+                            <span className="button-icon"><FontAwesomeIcon icon={faDownload} /></span>
                         </a>
                     </div>
                 </div>

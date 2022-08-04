@@ -1,8 +1,10 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 const SocialShare = [
   {
-    iconName: "fa fa-linkedin",
+    iconName: faLinkedinIn,
     link: "https://fr.linkedin.com/in/antoine-greuzard",
   }
 ];
@@ -13,7 +15,7 @@ const Social = () => {
       {SocialShare.map((val, i) => (
         <li key={i}>
           <a href={val.link} target="_blank" rel="noreferrer">
-            <i className={val.iconName}></i>
+            <i><FontAwesomeIcon icon={val.iconName} /></i>
           </a>
         </li>
       ))}

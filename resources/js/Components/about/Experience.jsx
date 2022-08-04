@@ -1,8 +1,10 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
 
 const experienceContent = [
     {
-        year: "   2021 - Maintenant",
+        year: "2021 - Maintenant",
         position: "Développeur web",
         compnayName: "Séquane",
         details: `Je travaille depuis avril chez Séquane, une agence de communication qui à deux pôles, web et print. Mes missions se situent dans le développement des sites internet, la gestion de projets, le SAV, la formation, etc.`,
@@ -27,7 +29,7 @@ const Experience = () => {
             {experienceContent.map((val, i) => (
                 <li key={i}>
                     <div className="icon">
-                        <i className="fa fa-briefcase"></i>
+                        <i><FontAwesomeIcon icon={faBriefcase} /></i>
                     </div>
                     <span className="time open-sans-font text-uppercase">{val.year}</span>
                     <h3 className="poppins-font text-uppercase">
