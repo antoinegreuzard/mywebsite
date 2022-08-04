@@ -2,6 +2,8 @@ import React from "react";
 // import heroImg from "../../../img/hero/antoine-greuzard.jpg";
 import heroImg from '../../../img/hero/antoine-greuzard.jpg';
 import heroImgMobile from "../../../img/hero/antoine-greuzard-mobile.jpg";
+import heroImgwebp from '../../../img/hero/antoine-greuzard.webp';
+import heroImgMobilewebp from "../../../img/hero/antoine-greuzard-mobile.webp";
 import cv from "../../../img/antoine-greuzard-CV.pdf";
 
 const heroContent = {
@@ -27,11 +29,14 @@ const Hero = () => {
                 ></div>
                 <div className="col-12 col-lg-8 offset-lg-4 home-details  text-center text-lg-start">
                     <div>
-                        <img
-                            src={heroContent.heroMobileImage}
-                            className="img-fluid main-img-mobile d-sm-block d-lg-none"
-                            alt="Antoine Greuzard" rel="preload" as="image"
-                        />
+                        <picture>
+                            <source srcSet={heroContent.heroImgMobilewebp} type="image/webp"/>
+                            <img
+                                src={heroContent.heroMobileImage}
+                                className="img-fluid main-img-mobile d-sm-block d-lg-none"
+                                alt="Antoine Greuzard" rel="preload" as="image"
+                            />
+                        </picture>
                         <h1 className="text-uppercase poppins-font">
                             {heroContent.heroTitleName}.
                             <span> {heroContent.heroDesignation}</span>
