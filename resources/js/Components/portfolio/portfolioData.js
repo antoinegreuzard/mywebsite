@@ -1,6 +1,6 @@
 import capbasket from "../../../img/portfolio/capbasket.jpg";
 import antoinegreuzard from "../../../img/portfolio/antoinegreuzard.jpg";
-import divinlys from "../../../img/portfolio/divinlys.jpg"; 
+import divinlys from "../../../img/portfolio/divinlys.jpg";
 import dryade from "../../../img/portfolio/dryade.jpg";
 import groupelefevre from "../../../img/portfolio/groupelefevre.jpg";
 import odoo from "../../../img/portfolio/o-doo.jpg";
@@ -82,7 +82,7 @@ const PortfolioData = [
         link: "https://dryade.fr/",
       },
     ],
-  },  
+  },
 	{
     id: 3,
     type: "O-doo",
@@ -98,7 +98,7 @@ const PortfolioData = [
         link: "https://o-doo.fr/",
       },
     ],
-  },  
+  },
 	{
     id: 4,
     type: "Groupe Lefevre",
@@ -114,7 +114,7 @@ const PortfolioData = [
         link: "https://groupelefevre.fr/",
       },
     ],
-  },  
+  },
 	{
     id: 5,
     type: "Divin'Lys",
@@ -130,7 +130,7 @@ const PortfolioData = [
         link: "https://divinlys.fr/",
       },
     ],
-  },  
+  },
 	{
     id: 7,
     type: "Antoine Greuzard",
@@ -223,7 +223,7 @@ const PortfolioData = [
         client: "Val de Consolation",
         langage: "Wordpress, Elementor",
         lien: "valdeconsolation.fr",
-        link: "https://optim-est.fr/",
+        link: "https://valdeconsolation.fr/",
       },
     ],
   },
