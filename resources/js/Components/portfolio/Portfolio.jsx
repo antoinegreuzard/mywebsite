@@ -1,7 +1,8 @@
 import React, {useState} from "react";
+import loadable from '@loadable/component'
 import {Tab, TabList, TabPanel, Tabs} from "react-tabs";
 import PortfolioData from "./portfolioData";
-import Modal from "./modal/Modal";
+const Modal = loadable(() => import('./modal/Modal'))
 
 const Portfolio = (props) => {
     const [getModal, setGetModal] = useState(false);

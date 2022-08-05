@@ -1,14 +1,16 @@
 import React from 'react';
+import loadable from '@loadable/component'
 import {Head} from '@inertiajs/inertia-react';
 import {Tab, TabList, TabPanel, Tabs} from "react-tabs";
-import Hero from "../Components/hero/Hero";
-import Index from "../Components/about/index";
-import Address from "../Components/Address";
-import Portfolio from "../Components/portfolio/Portfolio";
-import Contact from "../Components/Contact";
-import Social from "../Components/Social";
-import SwitchDark from "../Components/switch/SwitchDark";
-import CustomCursor from '@/Components/CustomCursor';
+const Hero = loadable(() => import('@/Components/hero/Hero'))
+const Index = loadable(() => import('@/Components/about/index'))
+const Address = loadable(() => import('@/Components/Address'))
+const Portfolio = loadable(() => import('@/Components/portfolio/Portfolio'))
+const Contact = loadable(() => import('@/Components/Contact'))
+const Social = loadable(() => import('@/Components/Social'))
+const SwitchDark = loadable(() => import('@/Components/switch/SwitchDark'))
+const CustomCursor = loadable(() => import('@/Components/CustomCursor'))
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faUser, faBriefcase, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
@@ -17,7 +19,7 @@ const menuItem = [{icon: faHome, menuName: "Accueil"}, {icon: faUser, menuName: 
     menuName: "Portfolio"
 }, {icon: faEnvelope, menuName: "Contact"}];
 
-export default function Welcome(props) {
+export default function Welcome() {
     return (<>
             <CustomCursor />
             <Head title="Welcome"/>

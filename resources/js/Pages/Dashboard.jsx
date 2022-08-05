@@ -1,7 +1,7 @@
 import '../../css/dashboard.scss';
 
 import React from 'react';
-import Authenticated from '@/Layouts/Authenticated';
+const Authenticated = loadable(() => import('@/Layouts/Authenticated'))
 import {Head, Link} from '@inertiajs/inertia-react';
 
 export default function Dashboard(props) {
