@@ -1,6 +1,7 @@
 import '../../css/dashboard.scss';
 
 import React from 'react';
+import loadable from '@loadable/component'
 const Authenticated = loadable(() => import('@/Layouts/Authenticated'))
 import {Head, Link} from '@inertiajs/inertia-react';
 
