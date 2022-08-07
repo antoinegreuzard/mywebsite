@@ -1,8 +1,7 @@
-import React, {useState} from "react";
-import loadable from '@loadable/component'
+import React, {useState, Suspense} from "react";
 import {Tab, TabList, TabPanel, Tabs} from "react-tabs";
 import PortfolioData from "./portfolioData";
-const Modal = loadable(() => import('./modal/Modal'))
+const Modal = React.lazy(() => import('./modal/Modal'))
 
 const Portfolio = (props) => {
     const [getModal, setGetModal] = useState(false);
@@ -15,6 +14,7 @@ const Portfolio = (props) => {
 
     return (
         <>
+            <Suspense>
             <div className="portfolio-main">
                 <Tabs>
                     <TabList className="portfolio-tab-list" data-aos="fade-up">
@@ -190,6 +190,7 @@ const Portfolio = (props) => {
                 </Tabs>
             </div>
             {getModal && <Modal modalId={modalId} setGetModal={setGetModal}/>}{" "}
+            </Suspense>
         </>
     );
 };

@@ -1,12 +1,12 @@
 import '../../css/dashboard.scss';
 
-import React from 'react';
-import loadable from '@loadable/component'
-const Authenticated = loadable(() => import('@/Layouts/Authenticated'))
+import React, { Suspense } from 'react';
 import {Head, Link} from '@inertiajs/inertia-react';
+const Authenticated = React.lazy(() => import('@/Layouts/Authenticated'))
 
 export default function Dashboard(props) {
     return (
+        <Suspense>
         <Authenticated
             auth={props.auth}
             errors={props.errors}
@@ -30,5 +30,6 @@ export default function Dashboard(props) {
                 </div>
             </div>
         </Authenticated>
+        </Suspense>
     );
 }

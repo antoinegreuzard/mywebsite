@@ -1,9 +1,8 @@
-import styles from '../css/app.scss';
+import '../css/app.scss';
 
 import React from "react";
 import { render } from 'react-dom';
 import { createInertiaApp } from '@inertiajs/inertia-react';
-import { InertiaProgress } from '@inertiajs/progress';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -20,5 +19,3 @@ createInertiaApp({
         return render(<App {...props} />, el);
     },
 });
-
-InertiaProgress.init({ color: '#4B5563' });

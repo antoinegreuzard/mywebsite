@@ -1,18 +1,16 @@
-import React from 'react';
-import loadable from '@loadable/component'
+import React, { Suspense } from 'react';
 import {Head} from '@inertiajs/inertia-react';
 import {Tab, TabList, TabPanel, Tabs} from "react-tabs";
-const Hero = loadable(() => import('@/Components/hero/Hero'))
-const Index = loadable(() => import('@/Components/about/index'))
-const Address = loadable(() => import('@/Components/Address'))
-const Portfolio = loadable(() => import('@/Components/portfolio/Portfolio'))
-const Contact = loadable(() => import('@/Components/Contact'))
-const Social = loadable(() => import('@/Components/Social'))
-const SwitchDark = loadable(() => import('@/Components/switch/SwitchDark'))
-const CustomCursor = loadable(() => import('@/Components/CustomCursor'))
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faUser, faBriefcase, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+const Hero = React.lazy(() => import('@/Components/hero/Hero'))
+const Index = React.lazy(() => import('@/Components/about/index'))
+const Address = React.lazy(() => import('@/Components/Address'))
+const Portfolio = React.lazy(() => import('@/Components/portfolio/Portfolio'))
+const Contact = React.lazy(() => import('@/Components/Contact'))
+const Social = React.lazy(() => import('@/Components/Social'))
+const SwitchDark = React.lazy(() => import('@/Components/switch/SwitchDark'))
+const CustomCursor = React.lazy(() => import('@/Components/CustomCursor'))
 
 const menuItem = [{icon: faHome, menuName: "Accueil"}, {icon: faUser, menuName: "CV"}, {
     icon: faBriefcase,
@@ -21,6 +19,7 @@ const menuItem = [{icon: faHome, menuName: "Accueil"}, {icon: faUser, menuName: 
 
 export default function Welcome() {
     return (<>
+        <Suspense>
             <CustomCursor />
             <Head title="Welcome"/>
             <div className="yellow">
@@ -126,5 +125,6 @@ export default function Welcome() {
                     </div>
                 </Tabs>
             </div>
+        </Suspense>
         </>);
 }
