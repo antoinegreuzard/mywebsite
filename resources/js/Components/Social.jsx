@@ -1,6 +1,6 @@
 import React from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faLinkedinIn, faGithub} from '@fortawesome/free-brands-svg-icons'
+import {faLinkedinIn, faGithub, faSkype} from '@fortawesome/free-brands-svg-icons'
 
 const SocialShare = [
     {
@@ -10,6 +10,10 @@ const SocialShare = [
     {
         iconName: faGithub,
         link: "https://github.com/antoinegreuzard",
+    },
+    {
+        iconName: faSkype,
+        link: "https://join.skype.com/invite/esIrFNeiMirt",
     }
 ];
 
