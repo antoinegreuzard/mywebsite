@@ -64,6 +64,8 @@
 		  }
 
 
+
+
     </script>
     <script type='application/ld+json'>
 		{
@@ -73,6 +75,8 @@
 		"url":"https://antoinegreuzard.fr/",
 		"name":"Antoine Greuzard"
 		}
+
+
 
     </script>
 
@@ -84,15 +88,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 
-    <!-- Template Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
-        rel="preload" as="font"
-    />
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700&display=swap"
-        rel="preload" as="font"
-    />
     <link rel="manifest" href="./manifest.json"/>
     <title>Antoine Greuzard - Développeur Web</title>
     <!-- Scripts -->

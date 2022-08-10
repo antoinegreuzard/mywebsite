@@ -1,16 +1,17 @@
-import React, { Suspense } from 'react';
+import React, { useEffect } from 'react';
 import {Head} from '@inertiajs/inertia-react';
 import {Tab, TabList, TabPanel, Tabs} from "react-tabs";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faUser, faBriefcase, faEnvelope } from '@fortawesome/free-solid-svg-icons'
-const Hero = React.lazy(() => import('@/Components/hero/Hero'))
-const Index = React.lazy(() => import('@/Components/about/index'))
-const Address = React.lazy(() => import('@/Components/Address'))
-const Portfolio = React.lazy(() => import('@/Components/portfolio/Portfolio'))
-const Contact = React.lazy(() => import('@/Components/Contact'))
-const Social = React.lazy(() => import('@/Components/Social'))
-const SwitchDark = React.lazy(() => import('@/Components/switch/SwitchDark'))
-const CustomCursor = React.lazy(() => import('@/Components/CustomCursor'))
+import AOS from "aos";
+import Hero from '@/Components/hero/Hero';
+import Index from '@/Components/about/index';
+import Address from '@/Components/Address';
+import Portfolio from '@/Components/portfolio/Portfolio';
+import Contact from '@/Components/Contact';
+import Social from '@/Components/Social';
+import SwitchDark from '@/Components/switch/SwitchDark';
+import CustomCursor from '@/Components/CustomCursor';
 
 const menuItem = [{icon: faHome, menuName: "Accueil"}, {icon: faUser, menuName: "CV"}, {
     icon: faBriefcase,
@@ -18,8 +19,12 @@ const menuItem = [{icon: faHome, menuName: "Accueil"}, {icon: faUser, menuName: 
 }, {icon: faEnvelope, menuName: "Contact"}];
 
 export default function Welcome() {
+    useEffect(() => {
+        AOS.init({
+            duration: 1200,
+        });
+    }, []);
     return (<>
-        <Suspense>
             <CustomCursor />
             <Head title="Welcome"/>
             <div className="yellow">
@@ -125,6 +130,5 @@ export default function Welcome() {
                     </div>
                 </Tabs>
             </div>
-        </Suspense>
         </>);
 }
