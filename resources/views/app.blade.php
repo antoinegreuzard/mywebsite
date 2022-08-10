@@ -85,9 +85,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
     <meta name="msapplication-TileColor" content="#da532c">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-
     <link rel="manifest" href="./manifest.json"/>
     <title>Antoine Greuzard - Développeur Web</title>
     <!-- Scripts -->

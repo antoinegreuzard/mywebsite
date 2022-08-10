@@ -1,6 +1,7 @@
 import React, {useState, Suspense} from "react";
 import {Tab, TabList, TabPanel, Tabs} from "react-tabs";
 import PortfolioData from "./portfolioData";
+import '../../../css/main/_portfolio.scss';
 const Modal = React.lazy(() => import('./modal/Modal'))
 
 const Portfolio = (props) => {
