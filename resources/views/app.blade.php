@@ -87,11 +87,24 @@
 
     <link rel="manifest" href="./manifest.json"/>
     <title>Antoine Greuzard - Développeur Web</title>
+	
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-RL98F4X9ZP"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-RL98F4X9ZP');
+	</script>
+	
+	<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/76a70888cae11310b84f8c80/script.js"></script>
+
     <!-- Scripts -->
     @inertiaHead
     @routes
     @viteReactRefresh
-    @vite('resources/js/app.jsx')
+    @vite('resources/js/app.jsx')  
 </head>
 <body>
 @inertia

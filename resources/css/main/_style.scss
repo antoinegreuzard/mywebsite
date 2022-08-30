@@ -282,6 +282,13 @@ body.light .header ul.icon-menu li.icon-box:hover i {
     color: #fff;
 }
 
+.contact .preview-link {
+    color: var(--main-primary-color);
+    text-decoration: underline;
+    font-size: 15px;
+    font-weight: 600;
+}
+
 @media (max-width: 991px) {
     body.light .main-img-mobile {
         border: 4px solid #eee;
@@ -1190,7 +1197,7 @@ body.light .contact .custom-span-contact a {
 
     @media screen and (min-width: 1920px) {
         .container {
-            padding-bottom: 131px;
+            padding-bottom: 55px;
         }
     }
 
@@ -2193,4 +2200,18 @@ h2 {
 .about .resume-box h3 {
     font-size: 18px;
     margin: 7px 0 10px;
+}
+
+/* COOKIE */
+
+.cky-consent-container, .cky-modal {
+	cursor: auto;
+}
+
+button.cky-show-desc-btn:not(:hover):not(:active) {
+    color: #CF9303 !important;
+}
+
+a {
+	color: #CF9303;
 }
