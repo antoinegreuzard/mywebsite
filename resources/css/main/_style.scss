@@ -387,7 +387,7 @@ body.light .header ul.icon-menu li.icon-box:hover i {
     body.light {
         .header {
             background: #fff;
-            box-shadow: 0 0px 47px #dedede;
+            box-shadow: 0 0 47px #dedede;
 
             ul.icon-menu li.icon-box {
                 background: #eee !important;
@@ -416,7 +416,6 @@ body.light .header ul.icon-menu li.icon-box:hover i {
     white-space: nowrap;
     text-overflow: ellipsis;
     text-align: center;
-    cursor: pointer;
     vertical-align: middle;
     user-select: none;
     transition: 250ms all ease-in-out;
@@ -525,7 +524,6 @@ body.light .header ul.icon-menu li.icon-box:hover i {
 .header {
     position: fixed;
     right: 30px;
-    z-index: 3;
     display: flex;
     align-items: center;
     top: 50%;
@@ -1889,8 +1887,8 @@ body.light .contact .custom-span-contact a {
     &::after {
         position: absolute;
         content: "";
-        top: 0px;
-        left: 0px;
+        top: 0;
+        left: 0;
         background-color: #222;
         z-index: 4;
     }
@@ -1904,8 +1902,8 @@ body.light .tab-panel_list > div {
 
 .tab-panel_list > div.react-tabs__tab-panel--selected:after {
     animation: anim 0.9s cubic-bezier(0.77, 0, 0.175, 1) both;
-    right: 0px;
-    bottom: 0px;
+    right: 0;
+    bottom: 0;
 }
 
 @keyframes anim {
@@ -2173,7 +2171,6 @@ h2 {
 }
 
 .about .box-stats p.poppins-font:not(span) {
-    color: #ffb400;
     color: var(--main-primary-color);
     display: inline-block;
     font-size: 50px;
@@ -2205,7 +2202,7 @@ h2 {
 /* COOKIE */
 
 .cky-consent-container, .cky-modal {
-	cursor: auto;
+    cursor: auto;
 }
 
 button.cky-show-desc-btn:not(:hover):not(:active) {
@@ -2213,5 +2210,11 @@ button.cky-show-desc-btn:not(:hover):not(:active) {
 }
 
 a {
-	color: #CF9303;
+    color: #CF9303;
+}
+
+@media screen and (max-width: 768px) {
+    .cky-revisit-bottom-right {
+        bottom: 5rem !important;
+    }
 }
